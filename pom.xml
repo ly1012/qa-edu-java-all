@@ -9,14 +9,27 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>qa-edu-java-image-comparison</module>
-        <module>qa-edu-java-sshj</module>
-        <module>qa-edu-java-etcd4j</module>
-        <module>qa-edu-java-docker-java</module>
-        <module>qa-edu-java</module>
-        <module>qa-edu-java-gofastdfs-api</module>
-        <module>qa-edu-java-algorithms</module>
+        <module>image-image-comparison</module>
+        <module>ssh-sshj</module>
+        <module>etcd-etcd4j</module>
+        <module>docker-docker-java</module>
+        <module>java</module>
+        <module>dfs-gofastdfs-api</module>
+        <module>java-algorithms</module>
+        <module>assert-assertj</module>
+        <module>java-design-pattern</module>
+        <module>jenkins-jenkins-client</module>
+        <module>jenkins-api</module>
+        <module>http-httpclient</module>
+        <module>selenium-selenide</module>
+        <module>selenium-selenium1</module>
+        <module>selenium-selenium3</module>
+        <module>appium</module>
     </modules>
+
+    <properties>
+        <build.plugins.plugin.version>3.8.1</build.plugins.plugin.version>
+    </properties>
 
     <dependencies>
 
@@ -24,7 +37,23 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.3</version>
+            <version>6.9.10</version>
+        </dependency>
+
+        <!-- 断言框架 -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <!-- use 2.9.1 for Java 7 projects -->
+            <version>3.11.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- HTTP 请求库 -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.0</version>
         </dependency>
 
         <!-- logback 日志 -->
@@ -45,6 +74,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${build.plugins.plugin.version}</version>
                 <configuration>
                     <source>8</source>
                     <target>8</target>

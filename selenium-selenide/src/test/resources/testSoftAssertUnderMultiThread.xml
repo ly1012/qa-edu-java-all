@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testSoftAssertUnderMultiThread" parallel="classes" thread-count="2">
+    <!--  测试结果表明：Configuration.assertionMode = SOFT 设置是全局生效的，且非线程独立，
+    即线程 A 设置后，线程 B 中也会生效  -->
+    <test name="testSoftAssert">
+        <classes>
+
+            <!-- 使用软断言 -->
+            <class name="com.liyun.qa.edu.selenium.selenide.assert_.SoftAssertThreadOneTest">
+                <methods>
+                    <include name="testSoftAssert"></include>
+                </methods>
+            </class>
+
+            <!-- 默认，观察是否会被 ThreadOne 干扰 -->
+            <class name="com.liyun.qa.edu.selenium.selenide.assert_.SoftAssertThreadTwoTest">
+                <methods>
+                    <include name="testSoftAssert"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
