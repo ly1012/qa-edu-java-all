@@ -22,7 +22,7 @@ public class DockerImageTest {
 
     private static final Logger logger = LoggerFactory.getLogger(DockerImageTest.class);
 
-    private static DockerClient docker = DockerTestUtil.getDockerClientWithoutTLS();
+    private static final DockerClient docker = DockerTestUtil.getDockerClientWithoutTLS();
 
     @Test
     public void testListImage() {

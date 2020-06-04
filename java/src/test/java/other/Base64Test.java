@@ -18,16 +18,16 @@ import java.util.Base64;
  */
 public class Base64Test {
 
-  private static Logger log = LoggerFactory.getLogger(Base64Test.class);
+  private static final Logger log = LoggerFactory.getLogger(Base64Test.class);
 
   //编码前
-  private String expectPlain = "/nginx/mocklab/xianbank_mock/online";
+  private final String expectPlain = "/nginx/mocklab/xianbank_mock/online";
   //编码后
-  private String expectBase64 = "L25naW54L21vY2tsYWIveGlhbmJhbmtfbW9jay9vbmxpbmU=";
+  private final String expectBase64 = "L25naW54L21vY2tsYWIveGlhbmJhbmtfbW9jay9vbmxpbmU=";
 
 
-  private Base64.Encoder encoder = Base64.getEncoder();
-  private Base64.Decoder decoder = Base64.getDecoder();
+  private final Base64.Encoder encoder = Base64.getEncoder();
+  private final Base64.Decoder decoder = Base64.getDecoder();
 
   @Test(description = "编码明文字符串")
   public void testEncodePlainString(){

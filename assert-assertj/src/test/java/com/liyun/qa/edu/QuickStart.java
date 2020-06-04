@@ -64,9 +64,9 @@ public class QuickStart {
 
   class User{
 
-    private String name;
-    private String surename;
-    private String email;
+    private final String name;
+    private final String surename;
+    private final String email;
 
     public User(String name, String surename, String email){
       this.name = name;

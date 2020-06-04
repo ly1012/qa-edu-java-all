@@ -31,7 +31,10 @@ public class QuickStart {
   public void userCanLoginByUsername() {
     // 启动浏览器，并访问百度
     open(TestURL.BAI_DU);
+    Configuration.fastSetValue = false;
+
     // 搜索框输入“selenide”
+    //$(By.id("kw")).setValue(null);
     $(By.id("kw")).setValue("selenide");
     // 点击 “百度一下”
     $("#su").click();

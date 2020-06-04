@@ -3,8 +3,10 @@ package regex;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -14,6 +16,21 @@ import static org.testng.Assert.assertTrue;
  * @author liyun
  */
 public class RegexTest {
+
+    @Test(description = "匹配提取单词")
+    public void testWords() {
+        //分割参数：正则表达式
+        String line = "Can I help you! isd --- sdf ; sd; 。 you\n me";
+        String[] words = line.split("[^a-zA-Z0-9]+"); //使用不包含 a-zA-Z0-9 的字符作为分隔符，从而得到单词列表
+        System.out.printf(Arrays.toString(words));
+    }
+
+    @Test(description = "匹配标准 ASCII 字符")
+    public void testAscii() {
+        //[\x00-\x7F] 范围从 0 - 127
+        boolean f = "a09e&*".matches("[\\x00-\\x7F]*");
+        assertThat(f).isTrue();
+    }
 
     @Test(description = "测试正则表达式中的横杠")
     public void testHyphen() {

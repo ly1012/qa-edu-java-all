@@ -18,7 +18,7 @@ import java.io.IOException;
  */
 public class Example {
 
-  private static Logger logger = LoggerFactory.getLogger(Example.class);
+  private static final Logger logger = LoggerFactory.getLogger(Example.class);
 
   public static void compareImage(String actual, String expected, String result) throws IOException {
     logger.info("比较图片 {} 和 {} 的差异，输出到：{}",actual,expected,result);

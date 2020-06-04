@@ -25,6 +25,9 @@
         <module>selenium-selenium1</module>
         <module>selenium-selenium3</module>
         <module>appium</module>
+        <module>unittest-testng</module>
+        <module>http-restassured</module>
+        <module>springboot-web</module>
     </modules>
 
     <properties>

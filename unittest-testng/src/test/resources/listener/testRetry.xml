@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testListener">
+    <listeners>
+        <listener class-name="com.liyun.qa.edu.sample.retry.SampleAnnotationTransformer"></listener>
+    </listeners>
+    <test name="testRetry">
+        <classes>
+
+            <class name="com.liyun.qa.edu.listener.ListenerTest2"></class>
+
+        </classes>
+    </test>
+
+    <test name="testRetry2">
+        <classes>
+
+            <class name="com.liyun.qa.edu.listener.ListenerTest2"></class>
+
+        </classes>
+    </test>
+
+</suite>

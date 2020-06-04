@@ -15,7 +15,7 @@ public class EnumTest {
         DOG("狗"),
         CAT("猫");
 
-        private String cname;
+        private final String cname;
 
         Animal(String cname){
             this.cname = cname;

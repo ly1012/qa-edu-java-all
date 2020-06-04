@@ -14,9 +14,9 @@ import static com.codeborne.selenide.Selenide.$;
  */
 public class BaiduPOPage {
 
-  private SelenideElement searchBox = $("#kw");
+  private final SelenideElement searchBox = $("#kw");
 
-  private SelenideElement searchButton = $("#su");
+  private final SelenideElement searchButton = $("#su");
 
   public BaiduPOPage open(){
     Selenide.open(TestURL.BAI_DU);

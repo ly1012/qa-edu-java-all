@@ -52,7 +52,7 @@ public class MultiPrint {
   }
 
   public static void testStaticAndNoStaticByField(){
-    new Thread(() -> StaticField.printSync.syncStaticAndWait()).start();
+    new Thread(() -> PrintSync.syncStaticAndWait()).start();
     sleep(1000);
     new Thread(() -> StaticField.printSync.syncNoStaticNoWait()).start();
   }

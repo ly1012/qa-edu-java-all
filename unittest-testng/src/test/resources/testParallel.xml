@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- 测试场景：
+1. 先启动 chrome，类同时运行
+2. 再启动 Firefox，类同时运行 -->
+<suite name="testParallel" parallel="classes" thread-count="2">
+    <test name="testChrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+
+            <class name="com.liyun.qa.edu.parallel.ClassOne">
+                <methods>
+                    <include name="test1"></include>
+                </methods>
+            </class>
+
+            <class name="com.liyun.qa.edu.parallel.ClassTwo">
+                <methods>
+                    <include name="test1"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="testFirefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+
+            <class name="com.liyun.qa.edu.parallel.ClassOne">
+                <methods>
+                    <include name="test1"></include>
+                </methods>
+            </class>
+
+            <class name="com.liyun.qa.edu.parallel.ClassTwo">
+                <methods>
+                    <include name="test1"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

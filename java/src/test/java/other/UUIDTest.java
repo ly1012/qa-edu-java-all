@@ -8,7 +8,10 @@ public class UUIDTest {
 
     @Test
     public void testUUID(){
-        System.out.println(UUID.randomUUID().toString().replaceAll("-","").toUpperCase());
+        String oid = UUID.randomUUID().toString();
+        System.out.println(oid);
+        System.out.println(oid.replaceAll("-",""));
+        System.out.println(oid.replaceAll("-","").toUpperCase());
     }
 
 }

@@ -20,7 +20,7 @@ public class DockerContainerTest {
 
     private static final Logger logger = LoggerFactory.getLogger(DockerContainerTest.class);
 
-    private static DockerClient docker = DockerTestUtil.getDockerClientWithoutTLS();
+    private static final DockerClient docker = DockerTestUtil.getDockerClientWithoutTLS();
 
     @Test
     public void testCreateAndStartContainer(){

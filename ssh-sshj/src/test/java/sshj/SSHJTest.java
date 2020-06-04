@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.security.Security;
 
 /**
@@ -51,7 +52,7 @@ public class SSHJTest {
       cmdo = session.exec(cmd);
       //获取命令执行结果流
       in = cmdo.getInputStream();
-      isr = new InputStreamReader(in, Charset.forName("UTF-8"));
+      isr = new InputStreamReader(in, StandardCharsets.UTF_8);
       reader = new BufferedReader(isr);
       String line;
       sb = new StringBuffer();

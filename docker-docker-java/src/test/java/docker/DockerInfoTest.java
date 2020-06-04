@@ -16,7 +16,7 @@ public class DockerInfoTest {
 
     private static final Logger logger = LoggerFactory.getLogger(DockerInfoTest.class);
 
-    private static DockerClient docker = DockerTestUtil.getDockerClientWithoutTLS();
+    private static final DockerClient docker = DockerTestUtil.getDockerClientWithoutTLS();
 
     @Test
     public void testDockerVersion(){

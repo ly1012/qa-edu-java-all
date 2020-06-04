@@ -12,11 +12,27 @@
     <artifactId>java</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.2.3</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/org.springframework.beans -->
+        <!--   使用 BeanUtils.copyProperties(Object source, Object target) 方法    -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.beans</artifactId>
+            <version>3.2.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.13</version>
+        </dependency>
+
     </dependencies>
 
 </project>

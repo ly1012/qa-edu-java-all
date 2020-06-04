@@ -22,7 +22,7 @@ public class RuntimeExceptionTest {
     }catch (Exception e){
       System.out.println("捕获到异常");
     }
-    System.out.println("I'm here."); //无法到达这里
+    System.out.println("I'm here."); //可以到达这里
   }
 
   @Test(description = "运行时异常，不捕获测试")
@@ -30,6 +30,7 @@ public class RuntimeExceptionTest {
     throw new RuntimeException("运行时异常，可以不捕获");  //编译通过，程序不是必须处理运行时异常。
     //System.out.println("I'm here."); //无法到达这里
   }
+
 
 
 }
