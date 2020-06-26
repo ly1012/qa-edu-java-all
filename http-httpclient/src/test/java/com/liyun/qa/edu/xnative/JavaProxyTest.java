@@ -22,8 +22,8 @@ public class JavaProxyTest {
 
   private static final String proxyHost = "127.0.0.1";
   private static final String proxyPort = "8888";
-  //private static final String URL = "http://nav.qadoc.org/cn/index.html";
-  private static final String URL = "https://www.baidu.com";
+  private static final String URL = "http://nav.qadoc.org/cn/index.html";
+  //private static final String URL = "https://www.baidu.com";
 
   @Test(description = "开启 HTTP 代理，方式一：设置系统属性")
   //代理设置错误或无法访问时，忽视代理，正常返回
@@ -59,6 +59,7 @@ public class JavaProxyTest {
       }
     }catch (SSLHandshakeException ssle){
      // ignore
+      ssle.printStackTrace();
     }catch (Exception e){
       Assertions.fail(e.getMessage());
       e.printStackTrace();

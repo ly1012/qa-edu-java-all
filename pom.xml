@@ -18,7 +18,6 @@
         <module>java-algorithms</module>
         <module>assert-assertj</module>
         <module>java-design-pattern</module>
-        <module>jenkins-jenkins-client</module>
         <module>jenkins-api</module>
         <module>http-httpclient</module>
         <module>selenium-selenide</module>
@@ -28,6 +27,9 @@
         <module>unittest-testng</module>
         <module>http-restassured</module>
         <module>springboot-web</module>
+        <module>template-handlebars</module>
+        <module>report-allure</module>
+        <module>jenkins-jenkins-rest</module>
     </modules>
 
     <properties>
