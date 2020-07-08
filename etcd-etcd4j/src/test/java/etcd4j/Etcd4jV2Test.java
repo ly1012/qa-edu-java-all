@@ -63,7 +63,7 @@ public class Etcd4jV2Test {
       System.out.println("timeout");
       e.printStackTrace();
     } catch (Exception e){
-      System.out.println("exception");
+      System.out.println("grammar.exception");
     }
   }
 
