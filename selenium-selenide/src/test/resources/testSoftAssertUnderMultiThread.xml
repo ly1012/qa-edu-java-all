@@ -7,14 +7,14 @@
         <classes>
 
             <!-- 使用软断言 -->
-            <class name="com.liyun.qa.edu.selenium.selenide.assert_.SoftAssertThreadOneTest">
+            <class name="com.liyun.qa.edu.selenide.assert_.SoftAssertThreadOneTest">
                 <methods>
                     <include name="testSoftAssert"></include>
                 </methods>
             </class>
 
             <!-- 默认，观察是否会被 ThreadOne 干扰 -->
-            <class name="com.liyun.qa.edu.selenium.selenide.assert_.SoftAssertThreadTwoTest">
+            <class name="com.liyun.qa.edu.selenide.assert_.SoftAssertThreadTwoTest">
                 <methods>
                     <include name="testSoftAssert"></include>
                 </methods>

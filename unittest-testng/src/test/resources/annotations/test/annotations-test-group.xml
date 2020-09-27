@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">  
+<suite name="group test">
+
+	<listeners>
+	</listeners>
+	
+    <test verbose="2" name="TestGroups">  
+        <groups>
+            <!-- 选取所有包含组 functest 的方法，然后排除其中包含组 checkintest 的方法-->
+            <run>  
+                <include name="functest" />
+                <exclude name="checkintest" />
+            </run>  
+        </groups>
+
+        <classes>
+            <class name="com.liyun.qa.edu.testng.annotations.test.TestGroup">
+	            <!--<methods>-->
+	            <!--	<include name="testMethod3"></include>-->
+	            <!--	<include name="testMethod2"></include>-->
+	            <!--	<include name="testMethod1"></include>-->
+	            <!--	<include name="testMethod4"></include>-->
+	            <!--</methods>-->
+            </class>
+        </classes>
+        
+     </test>
+
+</suite>

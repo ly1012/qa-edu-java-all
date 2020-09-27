@@ -4,3 +4,4 @@
 /output
 /target
 appium.iml
+src/test/resources/account.yml

@@ -5,16 +5,16 @@
 2. 再启动 Firefox，类同时运行 -->
 <suite name="testParallel" parallel="classes" thread-count="2">
     <test name="testChrome">
-        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="com.liyun.qa.edu.appium.browser" value="chrome"></parameter>
         <classes>
 
-            <class name="com.liyun.qa.edu.parallel.ClassOne">
+            <class name="com.liyun.qa.edu.testng.parallel.ClassOne">
                 <methods>
                     <include name="test1"></include>
                 </methods>
             </class>
 
-            <class name="com.liyun.qa.edu.parallel.ClassTwo">
+            <class name="com.liyun.qa.edu.testng.parallel.ClassTwo">
                 <methods>
                     <include name="test1"></include>
                 </methods>
@@ -24,16 +24,16 @@
     </test>
 
     <test name="testFirefox">
-        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="com.liyun.qa.edu.appium.browser" value="firefox"></parameter>
         <classes>
 
-            <class name="com.liyun.qa.edu.parallel.ClassOne">
+            <class name="com.liyun.qa.edu.testng.parallel.ClassOne">
                 <methods>
                     <include name="test1"></include>
                 </methods>
             </class>
 
-            <class name="com.liyun.qa.edu.parallel.ClassTwo">
+            <class name="com.liyun.qa.edu.testng.parallel.ClassTwo">
                 <methods>
                     <include name="test1"></include>
                 </methods>

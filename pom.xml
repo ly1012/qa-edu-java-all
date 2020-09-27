@@ -30,45 +30,43 @@
         <module>template-handlebars</module>
         <module>report-allure</module>
         <module>jenkins-jenkins-rest</module>
+        <module>edu-core</module>
+        <module>a-inbox</module>
     </modules>
 
     <properties>
         <build.plugins.plugin.version>3.8.1</build.plugins.plugin.version>
     </properties>
 
-    <dependencies>
+    <dependencyManagement>
 
-        <!-- 单元测试框架 -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.9.10</version>
-        </dependency>
+        <dependencies>
 
-        <!-- 断言框架 -->
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <!-- use 2.9.1 for Java 7 projects -->
-            <version>3.11.1</version>
-            <scope>test</scope>
-        </dependency>
+            <!-- 单元测试框架 -->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.9.10</version>
+            </dependency>
 
-        <!-- HTTP 请求库 -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>4.3.0</version>
-        </dependency>
+            <!-- 断言框架 -->
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <!-- use 2.9.1 for Java 7 projects -->
+                <version>3.11.1</version>
+                <scope>test</scope>
+            </dependency>
 
-        <!-- logback 日志 -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.2.3</version>
+            </dependency>
 
-    </dependencies>
+        </dependencies>
+
+    </dependencyManagement>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -76,6 +74,7 @@
             </plugins>
         </pluginManagement>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

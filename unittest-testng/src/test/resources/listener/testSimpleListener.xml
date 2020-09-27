@@ -2,17 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="testListener">
     <!--<listeners>-->
-    <!--    <listener class-name="com.liyun.qa.edu.listener.simple.SimpleTestListener"></listener>-->
-    <!--    <listener class-name="com.liyun.qa.edu.listener.simple.SimpleMethodInterceptor"></listener>-->
-    <!--    <listener class-name="com.liyun.qa.edu.listener.simple.SimpleInvokedMethodListener"></listener>-->
-    <!--    <listener class-name="com.liyun.qa.edu.listener.simple.SimpleExecutionListener"></listener>-->
-    <!--    <listener class-name="com.liyun.qa.edu.listener.simple.SimpleHookable"></listener>-->
+    <!--    <listener class-name="SimpleTestListener"></listener>-->
+    <!--    <listener class-name="SimpleMethodInterceptor"></listener>-->
+    <!--    <listener class-name="SimpleInvokedMethodListener"></listener>-->
+    <!--    <listener class-name="SimpleExecutionListener"></listener>-->
+    <!--    <listener class-name="SimpleHookable"></listener>-->
     <!--</listeners>-->
     <test name="testListener">
         <classes>
 
-            <class name="com.liyun.qa.edu.listener.ListenerTest3"></class>
-            <class name="com.liyun.qa.edu.listener.ListenerTest4"></class>
+            <class name="com.liyun.qa.edu.testng.listener.ListenerTest3"></class>
+            <class name="com.liyun.qa.edu.testng.listener.ListenerTest4"></class>
 
         </classes>
     </test>
@@ -20,7 +20,7 @@
     <test name="testListener2">
         <classes>
 
-            <class name="com.liyun.qa.edu.listener.ListenerTest2"></class>
+            <class name="com.liyun.qa.edu.testng.listener.ListenerTest2"></class>
 
         </classes>
     </test>

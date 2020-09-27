@@ -1,9 +1,10 @@
 package com.liyun.qa.edu.appium;
 
-import com.liyun.edu.util.Q;
+import com.liyun.qa.edu.core.util.Q;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -19,6 +20,8 @@ public class QuickStart {
 
   @BeforeClass
   public void setUp() throws MalformedURLException {
+    AppiumDriverLocalService.buildDefaultService().start();
+
     DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
     desiredCapabilities.setCapability("platformName", "Android");
     desiredCapabilities.setCapability("deviceName", "Huawei Honor");
@@ -26,9 +29,7 @@ public class QuickStart {
     desiredCapabilities.setCapability("appActivity", ".main.activity.LaunchActivity");
     desiredCapabilities.setCapability("unicodeKeyboard", "true");
     desiredCapabilities.setCapability("resetKeyboard", "true");
-
     URL remoteUrl = new URL("http://localhost:4723/wd/hub");
-
     driver = new AndroidDriver(remoteUrl, desiredCapabilities);
   }
 
